@@ -46,8 +46,8 @@ const projects = [
     technologies: ['Python', 'CNN', 'TensorFlow', 'React', 'Django REST API'],
     description:
       'AI-assisted chest X-ray analysis app for pneumonia detection with image upload, prediction results, confidence scores, and report generation.',
-    github: profile.github,
-    demo: '#contact',
+    github: 'https://github.com/ShreyaH-7/Clinical-decision-support-system', // TODO: paste original GitHub repo link here
+  
   },
   {
     title: 'AI-Powered College Enquiry Chatbot',
@@ -55,8 +55,8 @@ const projects = [
     technologies: ['Python', 'Flask', 'Dialogflow', 'SQLite', 'JavaScript'],
     description:
       'College enquiry platform with authentication, real-time chatbot interaction, Dialogflow integration, and a responsive web interface.',
-    github: profile.github,
-    demo: '#contact',
+    github: 'https://github.com/ShreyaH-7/Online-College-Enquiry-Chatgpt', // TODO: paste original GitHub repo link here
+  
   },
   {
     title: 'AI-Based Fake Profile Detection',
@@ -64,8 +64,8 @@ const projects = [
     technologies: ['Python', 'Flask', 'XGBoost', 'OpenCV', 'Face Recognition'],
     description:
       'Machine learning system that analyzes profile attributes and uses facial verification to identify suspicious or fake social accounts.',
-    github: profile.github,
-    demo: '#contact',
+    github: 'https://github.com/ShreyaH-7/Instagram-fake-profile-detection-system', // TODO: paste original GitHub repo link here
+
   },
   {
     title: 'Namma Mela Theatre Booking App',
@@ -73,8 +73,8 @@ const projects = [
     technologies: ['Android', 'MERN', 'MongoDB', 'JWT', 'Node.js'],
     description:
       'Theatre ticket booking application where users can view plays, check available seats, and book tickets with secure authentication and booking management.',
-    github: profile.github,
-    demo: '#contact',
+    github: 'https://github.com/ShreyaH-7/Namma-Mela', // TODO: paste original GitHub repo link here
+  
   },
   {
     title: 'Smart Resume Builder',
@@ -82,8 +82,8 @@ const projects = [
     technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'OpenAI API'],
     description:
       'AI-powered web app for creating ATS-friendly resumes, improving resume content, analyzing job descriptions, and downloading the final resume as a PDF.',
-    github: profile.github,
-    demo: '#contact',
+    github: 'https://github.com/ShreyaH-7/Smart-Resume-Maker', // TODO: paste original GitHub repo link here
+  
   },
 ];
 
@@ -346,9 +346,15 @@ function Projects() {
                 ))}
               </div>
               <div className="mt-5 flex gap-3">
-                <SmallButton href={project.github} external>
-                  GitHub
-                </SmallButton>
+                {project.github ? (
+                  <SmallButton href={project.github} external>
+                    GitHub
+                  </SmallButton>
+                ) : (
+                  <span className="rounded-md border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-400 dark:border-white/15 dark:bg-transparent dark:text-slate-500">
+                    Add GitHub Link
+                  </span>
+                )}
                 <SmallButton href={project.demo}>Demo</SmallButton>
               </div>
             </div>
