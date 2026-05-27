@@ -345,17 +345,16 @@ function Projects() {
                   </span>
                 ))}
               </div>
-              <div className="mt-5 flex gap-3">
+              <div className="mt-5 flex justify-center">
                 {project.github ? (
                   <SmallButton href={project.github} external>
                     GitHub
                   </SmallButton>
                 ) : (
-                  <span className="rounded-md border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-400 dark:border-white/15 dark:bg-transparent dark:text-slate-500">
+                  <span className="rounded-md border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-400 dark:border-white/15 dark:bg-transparent dark:text-slate-500">
                     Add GitHub Link
                   </span>
                 )}
-                <SmallButton href={project.demo}>Demo</SmallButton>
               </div>
             </div>
           </article>
