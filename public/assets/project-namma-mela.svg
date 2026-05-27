@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <rect width="1200" height="750" fill="#17120f"/>
+  <rect x="70" y="60" width="1060" height="630" rx="42" fill="#211a16" stroke="#4b3f38" stroke-width="3"/>
+  <text x="110" y="130" fill="#f8fafc" font-family="Arial, sans-serif" font-size="54" font-weight="700">Vanakkam, Namma Mela</text>
+  <rect x="110" y="170" width="490" height="300" rx="26" fill="#130f12" stroke="#5b4f5c" stroke-width="3"/>
+  <rect x="150" y="210" width="410" height="170" rx="12" fill="#dc141f"/>
+  <path d="M150 210C210 285 242 320 300 380H150V210Z" fill="#8b0710" opacity=".65"/>
+  <path d="M560 210C500 285 468 320 410 380H560V210Z" fill="#8b0710" opacity=".65"/>
+  <circle cx="252" cy="305" r="58" fill="#120d0f"/>
+  <circle cx="375" cy="304" r="64" fill="#120d0f"/>
+  <circle cx="486" cy="304" r="55" fill="#120d0f"/>
+  <text x="150" y="535" fill="#f1e8f5" font-family="Arial, sans-serif" font-size="44" font-weight="700">Veera Tamizhan</text>
+  <text x="150" y="585" fill="#c9bdc8" font-family="Arial, sans-serif" font-size="30">Historical Drama • 2h 20m</text>
+  <rect x="680" y="180" width="360" height="360" rx="30" fill="#1f1916"/>
+  <text x="720" y="245" fill="#f1e8f5" font-family="Arial, sans-serif" font-size="44" font-weight="700">Seat Booking</text>
+  <text x="720" y="288" fill="#c9bdc8" font-family="Arial, sans-serif" font-size="24">Available • Selected • Reserved</text>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">
+    <rect x="725" y="325" width="58" height="58" rx="16" fill="#078d2f"/><text x="740" y="363">S1</text>
+    <rect x="800" y="325" width="58" height="58" rx="16" fill="#078d2f"/><text x="815" y="363">S2</text>
+    <rect x="875" y="325" width="58" height="58" rx="16" fill="#ff7a00"/><text x="890" y="363">S3</text>
+    <rect x="950" y="325" width="58" height="58" rx="16" fill="#078d2f"/><text x="965" y="363">S4</text>
+    <rect x="725" y="405" width="58" height="58" rx="16" fill="#078d2f"/><text x="740" y="443">S5</text>
+    <rect x="800" y="405" width="58" height="58" rx="16" fill="#ff7a00"/><text x="815" y="443">S6</text>
+    <rect x="875" y="405" width="58" height="58" rx="16" fill="#078d2f"/><text x="890" y="443">S7</text>
+    <rect x="950" y="405" width="58" height="58" rx="16" fill="#b91c1c"/><text x="965" y="443">S8</text>
+  </g>
+  <rect x="720" y="590" width="320" height="62" rx="31" fill="#d8b4fe"/>
+  <text x="811" y="630" fill="#312445" font-family="Arial, sans-serif" font-size="28" font-weight="700">Book Seats</text>
+</svg>
