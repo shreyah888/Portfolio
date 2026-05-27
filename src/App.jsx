@@ -351,7 +351,7 @@ function Projects() {
                     GitHub
                   </ProjectGithubButton>
                 ) : (
-                  <span className="inline-flex min-w-[190px] justify-center rounded-lg border border-dashed border-teal-300/70 bg-teal-50 px-5 py-3 text-sm font-semibold text-teal-700 dark:border-teal-300/35 dark:bg-teal-300/10 dark:text-teal-200">
+                  <span className="inline-flex min-w-[190px] justify-center rounded-lg border border-dashed border-violet-300/80 bg-violet-50 px-5 py-3 text-sm font-semibold text-violet-700 dark:border-violet-300/35 dark:bg-violet-300/10 dark:text-violet-200">
                     Add GitHub Link
                   </span>
                 )}
@@ -504,7 +504,7 @@ function ProjectGithubButton({ href, children, external = false }) {
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noreferrer' : undefined}
-      className="inline-flex min-w-[190px] items-center justify-center rounded-lg bg-teal-500 px-6 py-3 text-sm font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-[0_0_24px_rgba(20,184,166,0.24)] dark:bg-teal-300 dark:text-slate-950 dark:hover:bg-teal-200"
+      className="inline-flex min-w-[190px] items-center justify-center rounded-lg bg-slate-950 px-6 py-3 text-sm font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-violet-700 hover:shadow-[0_0_24px_rgba(124,58,237,0.22)] dark:bg-violet-400 dark:text-slate-950 dark:hover:bg-violet-300 dark:hover:shadow-[0_0_24px_rgba(167,139,250,0.24)]"
     >
       {children}
     </a>
