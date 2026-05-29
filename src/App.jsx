@@ -327,35 +327,37 @@ function Projects() {
     <Section id="projects" label="Projects" title="Selected work">
       <div className="grid gap-4 lg:grid-cols-3">
         {projects.map((project) => (
-          <article key={project.title} className="card group overflow-hidden">
-            <div className="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-950">
+          <article key={project.title} className="card group flex h-full overflow-hidden">
+            <div className="flex w-full flex-col">
+            <div className="aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-slate-950">
               <img
                 src={project.image}
                 alt={`${project.title} preview`}
                 className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
               />
             </div>
-            <div className="p-5">
+            <div className="flex flex-1 flex-col p-4">
               <h3 className="text-lg font-semibold text-slate-950 dark:text-white">{project.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{project.description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
+              <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">{project.description}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
                   <span key={tech} className="rounded-md bg-teal-50 px-2.5 py-1 text-xs font-medium text-teal-700 dark:bg-teal-300/10 dark:text-teal-200">
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="mt-6 flex justify-center">
+              <div className="mt-auto flex justify-center pt-4">
                 {project.github ? (
                   <ProjectGithubButton href={project.github} external>
-                    GitHub
+                    View on GitHub
                   </ProjectGithubButton>
                 ) : (
-                  <span className="inline-flex min-w-[190px] justify-center rounded-lg border border-dashed border-violet-300/80 bg-violet-50 px-5 py-3 text-sm font-semibold text-violet-700 dark:border-violet-300/35 dark:bg-violet-300/10 dark:text-violet-200">
+                  <span className="inline-flex w-[64%] min-w-[180px] max-w-[245px] items-center justify-center rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-sm font-medium text-slate-500 dark:border-white/15 dark:bg-white/[0.04] dark:text-slate-400">
                     Add GitHub Link
                   </span>
                 )}
               </div>
+            </div>
             </div>
           </article>
         ))}
@@ -504,8 +506,13 @@ function ProjectGithubButton({ href, children, external = false }) {
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noreferrer' : undefined}
-      className="inline-flex min-w-[190px] items-center justify-center rounded-lg bg-slate-950 px-6 py-3 text-sm font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-violet-700 hover:shadow-[0_0_24px_rgba(124,58,237,0.22)] dark:bg-violet-400 dark:text-slate-950 dark:hover:bg-violet-300 dark:hover:shadow-[0_0_24px_rgba(167,139,250,0.24)]"
+      className="group inline-flex w-[64%] min-w-[180px] max-w-[245px] items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition duration-300 ease-out hover:-translate-y-0.5 hover:border-teal-300 hover:text-teal-700 hover:shadow-[0_10px_24px_rgba(20,184,166,0.14)] focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-white dark:border-white/15 dark:bg-white/[0.05] dark:text-slate-100 dark:shadow-none dark:hover:border-teal-300/50 dark:hover:bg-white/[0.08] dark:hover:text-teal-200 dark:hover:shadow-[0_0_24px_rgba(45,212,191,0.12)] dark:focus:ring-teal-300 dark:focus:ring-offset-[#0b1120]"
     >
+      <span className="grid h-7 w-7 place-items-center rounded-full bg-slate-100 text-slate-800 transition group-hover:bg-teal-50 group-hover:text-teal-700 dark:bg-white/10 dark:text-slate-100 dark:group-hover:bg-teal-300/10 dark:group-hover:text-teal-200">
+        <svg aria-hidden="true" viewBox="0 0 16 16" className="h-4 w-4 fill-current">
+          <path d="M8 0C3.58 0 0 3.67 0 8.2c0 3.62 2.29 6.69 5.47 7.78.4.08.55-.18.55-.4 0-.2-.01-.86-.01-1.57-2.01.38-2.53-.5-2.69-.96-.09-.24-.48-.96-.82-1.15-.28-.16-.68-.55-.01-.56.63-.01 1.08.59 1.23.84.72 1.24 1.87.89 2.33.68.07-.53.28-.89.51-1.1-1.78-.21-3.64-.91-3.64-4.03 0-.89.31-1.62.82-2.19-.08-.21-.36-1.04.08-2.16 0 0 .67-.22 2.2.84A7.41 7.41 0 0 1 8 3.94c.68 0 1.36.09 2 .28 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.95.08 2.16.51.57.82 1.3.82 2.19 0 3.13-1.87 3.82-3.65 4.03.29.26.54.75.54 1.52 0 1.1-.01 1.98-.01 2.25 0 .22.15.48.55.4A8.08 8.08 0 0 0 16 8.2C16 3.67 12.42 0 8 0Z" />
+        </svg>
+      </span>
       {children}
     </a>
   );
